@@ -1,0 +1,48 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+use IEEE.numeric_std.all;
+
+entity nbit_full_adder is
+
+    generic (n : positive := 8);
+
+    port 
+    (
+        i_a, i_b    : in std_logic_vecor (n-1 downto 0) := (others => '0');
+        i_cin       : in std_logic := '0';
+
+        o_sum       : out std_logic_vecotr (n-1 downto 0) := (others => '0');
+        o_cout      : out std_logic := '0'
+    );
+end nbit_full_adder;
+
+architecture rtl of nbit_full_adder is
+    component Full_Adder_1bit
+        port
+        (
+            a, b, cin : in std_logic;
+            sum, cout : out std_logic
+        );
+    end component Full_Adder_1bit;
+
+    signal s_tmp_carry : std_logic_vecor (n downto 0);
+
+begin
+    
+    tmp_carry(0) <= cin;
+    o_cout <= tmp_carry(n);
+
+    GEN_ADDER:
+    for i in 0 to n-1 generate 
+        ADDX : Full_Adder_1bit port map
+            (
+                i_a(i),
+                i_b(i),
+                s_tmp_carry(i),
+                o_sum(i),
+                s_tmp_carry(i+1)
+            );
+    end generate GEN_ADDER;
+    
+    
+end architecture rtl;

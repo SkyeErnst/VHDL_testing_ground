@@ -1,11 +1,11 @@
-Analysis & Synthesis Status : Successful - Sat Apr 23 22:47:30 2022
-Quartus Prime Version : 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Analysis & Synthesis Status : Successful - Mon Apr 25 03:37:43 2022
+Quartus Prime Version : 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 Revision Name : TestingGround
-Top-level Entity Name : GenRegV2
+Top-level Entity Name : nbit_full_adder
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 24
-Total pins : 12
+Total registers : 0
+Total pins : 9
 Total virtual pins : 0
 Total block memory bits : 0
 Total DSP Blocks : 0
