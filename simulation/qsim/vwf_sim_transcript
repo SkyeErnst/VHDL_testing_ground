@@ -1,0 +1,249 @@
+Determining the location of the ModelSim executable...
+
+Using: K:/intelFPGA/20.1/modelsim_ase/win32aloem
+
+To specify a ModelSim executable directory, select: Tools -> Options -> EDA Tool Options
+Note: if both Questa Intel FPGA Edition and ModelSim executables are available, Questa Intel FPGA Edition will be used.
+
+**** Generating the ModelSim Testbench ****
+
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TestingGround -c TestingGround --vector_source="K:/_programming/Quartus projects/TestingGround/GenRegV2_Waveforms_Test.vwf" --testbench_file="K:/_programming/Quartus projects/TestingGround/simulation/qsim/GenRegV2_Waveforms_Test.vwf.vht"
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Apr 23 19:44:27 2022
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off TestingGround -c TestingGround --vector_source="K:/_programming/Quartus projects/TestingGround/GenRegV2_Waveforms_Test.vwf" --testbench_file="K:/_programming/Quartus projects/TestingGround/simulation/qsim/GenRegV2_Waveforms_Test.vwf.vht"
+Info (119006): Selected device 5CEBA4F23C7 for design "TestingGround"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+
+REG:1:REGX|b_data~reg0" in design
+
+Completed successfully. 
+
+**** Generating the functional simulation netlist ****
+
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="K:/_programming/Quartus projects/TestingGround/simulation/qsim/" TestingGround -c TestingGround
+
+Info: *******************************************************************
+Info: Running Quartus Prime EDA Netlist Writer
+    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+    Info: Copyright (C) 2021  Intel Corporation. All rights reserved.
+    Info: Your use of Intel Corporation's design tools, logic functions 
+    Info: and other software and tools, and any partner logic 
+    Info: functions, and any output files from any of the foregoing 
+    Info: (including device programming or simulation files), and any 
+    Info: associated documentation or information are expressly subject 
+    Info: to the terms and conditions of the Intel Program License 
+    Info: Subscription Agreement, the Intel Quartus Prime License Agreement,
+    Info: the Intel FPGA IP License Agreement, or other applicable license
+    Info: agreement, including, without limitation, that your use is for
+    Info: the sole purpose of programming logic devices manufactured by
+    Info: Intel and sold by Intel or its authorized distributors.  Please
+    Info: refer to the applicable agreement for further details, at
+    Info: https://fpgasoftware.intel.com/eula.
+    Info: Processing started: Sat Apr 23 19:44:28 2022
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="K:/_programming/Quartus projects/TestingGround/simulation/qsim/" TestingGround -c TestingGround
+Info (119006): Selected device 5CEBA4F23C7 for design "TestingGround"
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (204019): Generated file TestingGround.vho in folder "K:/_programming/Quartus projects/TestingGround/simulation/qsim//" for EDA simulation tool
+Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4724 megabytes
+    Info: Processing ended: Sat Apr 23 19:44:29 2022
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:01
+
+Completed successfully. 
+
+**** Generating the ModelSim .do script ****
+
+K:/_programming/Quartus projects/TestingGround/simulation/qsim/TestingGround.do generated.
+
+Completed successfully. 
+
+**** Running the ModelSim simulation ****
+
+K:/intelFPGA/20.1/modelsim_ase/win32aloem/vsim -c -do TestingGround.do
+
+Reading pref.tcl
+
+
+# 2020.1
+
+
+# do TestingGround.do
+
+# ** Warning: (vlib-34) Library already exists at "work".
+
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 19:44:30 on Apr 23,2022
+# vcom -work work TestingGround.vho 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Loading package VITAL_Timing
+
+# -- Loading package VITAL_Primitives
+
+# -- Loading package dffeas_pack
+
+# -- Loading package altera_primitives_components
+
+# -- Loading package altera_lnsim_components
+
+# -- Loading package cyclonev_atom_pack
+
+# -- Loading package cyclonev_components
+
+# -- Compiling entity GenRegV2
+
+# -- Compiling architecture structure of GenRegV2
+
+# End time: 19:44:30 on Apr 23,2022, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# Model Technology ModelSim - Intel FPGA Edition vcom 2020.1 Compiler 2020.02 Feb 28 2020
+
+# Start time: 19:44:30 on Apr 23,2022
+# vcom -work work GenRegV2_Waveforms_Test.vwf.vht 
+
+# -- Loading package STANDARD
+
+# -- Loading package TEXTIO
+
+# -- Loading package std_logic_1164
+
+# -- Compiling entity GenRegV2_vhd_vec_tst
+
+# -- Compiling architecture GenRegV2_arch of GenRegV2_vhd_vec_tst
+
+# End time: 19:44:30 on Apr 23,2022, Elapsed time: 0:00:00
+
+# Errors: 0, Warnings: 0
+
+# vsim -c -t 1ps -L cyclonev -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.GenRegV2_vhd_vec_tst 
+# Start time: 19:44:30 on Apr 23,2022
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading work.genregv2_vhd_vec_tst(genregv2_arch)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading altera_lnsim.altera_lnsim_components
+# Loading cyclonev.cyclonev_atom_pack(body)
+# Loading cyclonev.cyclonev_components
+# Loading work.genregv2(structure)
+# Loading ieee.std_logic_arith(body)
+# Loading cyclonev.cyclonev_io_obuf(arch)
+# Loading cyclonev.cyclonev_io_ibuf(arch)
+# Loading altera.dffeas(vital_dffeas)
+# Loading cyclonev.cyclonev_lcell_comb(vital_lcell_comb)
+
+# after#34
+
+# End time: 19:44:31 on Apr 23,2022, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+
+Completed successfully. 
+
+**** Converting ModelSim VCD to vector waveform ****
+
+Reading K:/_programming/Quartus projects/TestingGround/GenRegV2_Waveforms_Test.vwf...
+
+Reading K:/_programming/Quartus projects/TestingGround/simulation/qsim/TestingGround.msim.vcd...
+
+Processing channel transitions... 
+
+Warning: one_bit_d_ff:\GEN_REG:0:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:0:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:1:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:1:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:2:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:2:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:3:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:3:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:4:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:4:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:5:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:5:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:6:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:6:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:7:REGX|b_data~en - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:7:REGX|s_latched_data - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:7:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:6:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:5:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:4:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:3:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:2:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:1:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:0:REGX|b_data~reg0 - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:7:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:6:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:5:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:4:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:3:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:2:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:1:REGX|b_data~direct - signal not found in VCD.
+
+Warning: one_bit_d_ff:\GEN_REG:0:REGX|b_data~direct - signal not found in VCD.
+
+Writing the resulting VWF to K:/_programming/Quartus projects/TestingGround/simulation/qsim/TestingGround_20220423194431.sim.vwf
+
+Finished VCD to VWF conversion.
+
+Completed successfully. 
+
+All completed.

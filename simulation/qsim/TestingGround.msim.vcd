@@ -1,0 +1,248 @@
+$comment
+	File created using the following command:
+		vcd file TestingGround.msim.vcd -direction
+$end
+$date
+	Sat Apr 23 19:44:31 2022
+$end
+$version
+	ModelSim Version 2020.1
+$end
+$timescale
+	1ps
+$end
+
+$scope module genregv2_vhd_vec_tst $end
+$var wire 1 ! b_data [7] $end
+$var wire 1 " b_data [6] $end
+$var wire 1 # b_data [5] $end
+$var wire 1 $ b_data [4] $end
+$var wire 1 % b_data [3] $end
+$var wire 1 & b_data [2] $end
+$var wire 1 ' b_data [1] $end
+$var wire 1 ( b_data [0] $end
+$var wire 1 ) i_clk $end
+$var wire 1 * i_enable_in $end
+$var wire 1 + i_enable_out $end
+$var wire 1 , i_rst $end
+
+$scope module i1 $end
+$var wire 1 - gnd $end
+$var wire 1 . vcc $end
+$var wire 1 / unknown $end
+$var wire 1 0 devoe $end
+$var wire 1 1 devclrn $end
+$var wire 1 2 devpor $end
+$var wire 1 3 ww_devoe $end
+$var wire 1 4 ww_devclrn $end
+$var wire 1 5 ww_devpor $end
+$var wire 1 6 ww_i_clk $end
+$var wire 1 7 ww_i_rst $end
+$var wire 1 8 ww_i_enable_in $end
+$var wire 1 9 ww_i_enable_out $end
+$var wire 1 : \b_data[0]~output_o\ $end
+$var wire 1 ; \b_data[1]~output_o\ $end
+$var wire 1 < \b_data[2]~output_o\ $end
+$var wire 1 = \b_data[3]~output_o\ $end
+$var wire 1 > \b_data[4]~output_o\ $end
+$var wire 1 ? \b_data[5]~output_o\ $end
+$var wire 1 @ \b_data[6]~output_o\ $end
+$var wire 1 A \b_data[7]~output_o\ $end
+$var wire 1 B \i_clk~input_o\ $end
+$var wire 1 C \b_data[0]~input_o\ $end
+$var wire 1 D \i_rst~input_o\ $end
+$var wire 1 E \i_enable_in~input_o\ $end
+$var wire 1 F \GEN_REG:0:REGX|s_latched_data~q\ $end
+$var wire 1 G \GEN_REG:7:REGX|b_data~1_combout\ $end
+$var wire 1 H \GEN_REG:0:REGX|b_data~reg0_q\ $end
+$var wire 1 I \i_enable_out~input_o\ $end
+$var wire 1 J \GEN_REG:0:REGX|b_data~1_combout\ $end
+$var wire 1 K \GEN_REG:0:REGX|b_data~en_q\ $end
+$var wire 1 L \b_data[1]~input_o\ $end
+$var wire 1 M \GEN_REG:1:REGX|s_latched_data~q\ $end
+$var wire 1 N \GEN_REG:1:REGX|b_data~reg0_q\ $end
+$var wire 1 O \GEN_REG:1:REGX|b_data~1_combout\ $end
+$var wire 1 P \GEN_REG:1:REGX|b_data~en_q\ $end
+$var wire 1 Q \b_data[2]~input_o\ $end
+$var wire 1 R \GEN_REG:2:REGX|s_latched_data~q\ $end
+$var wire 1 S \GEN_REG:2:REGX|b_data~reg0_q\ $end
+$var wire 1 T \GEN_REG:2:REGX|b_data~1_combout\ $end
+$var wire 1 U \GEN_REG:2:REGX|b_data~en_q\ $end
+$var wire 1 V \b_data[3]~input_o\ $end
+$var wire 1 W \GEN_REG:3:REGX|s_latched_data~q\ $end
+$var wire 1 X \GEN_REG:3:REGX|b_data~reg0_q\ $end
+$var wire 1 Y \GEN_REG:3:REGX|b_data~1_combout\ $end
+$var wire 1 Z \GEN_REG:3:REGX|b_data~en_q\ $end
+$var wire 1 [ \b_data[4]~input_o\ $end
+$var wire 1 \ \GEN_REG:4:REGX|s_latched_data~q\ $end
+$var wire 1 ] \GEN_REG:4:REGX|b_data~reg0_q\ $end
+$var wire 1 ^ \GEN_REG:4:REGX|b_data~1_combout\ $end
+$var wire 1 _ \GEN_REG:4:REGX|b_data~en_q\ $end
+$var wire 1 ` \b_data[5]~input_o\ $end
+$var wire 1 a \GEN_REG:5:REGX|s_latched_data~q\ $end
+$var wire 1 b \GEN_REG:5:REGX|b_data~reg0_q\ $end
+$var wire 1 c \GEN_REG:5:REGX|b_data~1_combout\ $end
+$var wire 1 d \GEN_REG:5:REGX|b_data~en_q\ $end
+$var wire 1 e \b_data[6]~input_o\ $end
+$var wire 1 f \GEN_REG:6:REGX|s_latched_data~q\ $end
+$var wire 1 g \GEN_REG:6:REGX|b_data~reg0_q\ $end
+$var wire 1 h \GEN_REG:6:REGX|b_data~1_combout\ $end
+$var wire 1 i \GEN_REG:6:REGX|b_data~en_q\ $end
+$var wire 1 j \b_data[7]~input_o\ $end
+$var wire 1 k \GEN_REG:7:REGX|s_latched_data~q\ $end
+$var wire 1 l \GEN_REG:7:REGX|b_data~reg0_q\ $end
+$var wire 1 m \GEN_REG:7:REGX|b_data~2_combout\ $end
+$var wire 1 n \GEN_REG:7:REGX|b_data~en_q\ $end
+$var wire 1 o \ALT_INV_i_rst~input_o\ $end
+$var wire 1 p \ALT_INV_i_enable_in~input_o\ $end
+$var wire 1 q \ALT_INV_i_enable_out~input_o\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0)
+1*
+1+
+1,
+0-
+1.
+x/
+10
+11
+12
+13
+14
+15
+06
+17
+18
+19
+z:
+z;
+z<
+z=
+z>
+z?
+z@
+zA
+0B
+zC
+1D
+1E
+0F
+1G
+0H
+1I
+0J
+0K
+zL
+0M
+0N
+0O
+0P
+zQ
+0R
+0S
+0T
+0U
+zV
+0W
+0X
+0Y
+0Z
+z[
+0\
+0]
+0^
+0_
+z`
+0a
+0b
+0c
+0d
+ze
+0f
+0g
+0h
+0i
+zj
+0k
+0l
+0m
+0n
+0o
+0p
+0q
+z!
+z"
+z#
+z$
+z%
+z&
+z'
+z(
+$end
+#10000
+1)
+16
+1B
+#20000
+0)
+0*
+06
+08
+0E
+0B
+1p
+0G
+#30000
+1)
+16
+1B
+zF
+zM
+zR
+zW
+z\
+za
+zf
+zk
+#40000
+0)
+1*
+06
+18
+1E
+0B
+0p
+1G
+#50000
+1)
+16
+1B
+zH
+zN
+zS
+zX
+z]
+zb
+zg
+zl
+#60000
+0)
+06
+0B
+#70000
+1)
+16
+1B
+#80000
+0)
+06
+0B
+#90000
+1)
+16
+1B
+#100000

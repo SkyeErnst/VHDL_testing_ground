@@ -1,0 +1,203 @@
+m255
+K4
+z2
+!s11e vcom 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dK:/_programming/Quartus projects/TestingGround/simulation/qsim
+Egenericregister
+Z1 w1650479909
+Z2 DPx8 cyclonev 18 cyclonev_atom_pack 0 22 3HQPc5MVbmOPN?>a5EBYj2
+Z3 DPx8 cyclonev 19 cyclonev_components 0 22 jZ]H46BQLgIP5mfRTO`3B1
+Z4 DPx12 altera_lnsim 23 altera_lnsim_components 0 22 ^Ch;U@;bMk1;>A2B<UV`k2
+Z5 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z6 DPx6 altera 11 dffeas_pack 0 22 dc5N=DKXMMTVYdUQ@D3FA2
+Z7 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z8 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z9 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z10 DPx6 altera 28 altera_primitives_components 0 22 ca:ehlQAg4;_gVV:^8MAg3
+!i122 2
+R0
+Z11 8TestingGround.vho
+Z12 FTestingGround.vho
+l0
+Z13 L39 1
+VjQNi[mehhkHF=h_oK=W=U3
+!s100 bQ>B@>mm0m>4:aPo0Dn5D1
+Z14 OV;C;2020.1;71
+32
+Z15 !s110 1650479910
+!i10b 1
+Z16 !s108 1650479910.000000
+Z17 !s90 -work|work|TestingGround.vho|
+Z18 !s107 TestingGround.vho|
+!i113 1
+Z19 o-work work
+Z20 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 15 genericregister 0 22 jQNi[mehhkHF=h_oK=W=U3
+!i122 2
+l231
+L106 2134
+VDHW[G^=lRgYzfeS>N9H5G2
+!s100 HMnXjX4dkdCjI]kXEGb>c3
+R14
+32
+R15
+!i10b 1
+R16
+R17
+R18
+!i113 1
+R19
+R20
+Egenericregister_vhd_vec_tst
+Z21 w1650479908
+R8
+R9
+!i122 3
+R0
+Z22 8GenericRegister.vwf.vht
+Z23 FGenericRegister.vwf.vht
+l0
+Z24 L32 1
+ViV>Yi^jK>M0VJaUadWol51
+!s100 ]TZV:Qnn?enab9ULZQ7670
+R14
+32
+R15
+!i10b 1
+R16
+Z25 !s90 -work|work|GenericRegister.vwf.vht|
+Z26 !s107 GenericRegister.vwf.vht|
+!i113 1
+R19
+R20
+Agenericregister_arch
+R8
+R9
+DEx4 work 27 genericregister_vhd_vec_tst 0 22 iV>Yi^jK>M0VJaUadWol51
+!i122 3
+l55
+L34 205
+VD7Wo39YS6Ykz5m_42g:<80
+!s100 IVfB2?MOBmZ0Kz12Q^kRP2
+R14
+32
+R15
+!i10b 1
+R16
+R25
+R26
+!i113 1
+R19
+R20
+Egenregv2
+Z27 w1650757469
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+!i122 14
+R0
+R11
+R12
+l0
+R13
+VNg6A^ARG3>9:;OclOVlli1
+!s100 ih8TKO]K7M<Q>RNIab=^U1
+R14
+32
+Z28 !s110 1650757470
+!i10b 1
+Z29 !s108 1650757470.000000
+R17
+R18
+!i113 1
+R19
+R20
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+R10
+DEx4 work 8 genregv2 0 22 Ng6A^ARG3>9:;OclOVlli1
+!i122 14
+l120
+L49 795
+ViJkSzYTH8]N2;PeZHJgVA1
+!s100 XFKXZ>j@^C2C4Ca1aW[MJ1
+R14
+32
+R28
+!i10b 1
+R29
+R17
+R18
+!i113 1
+R19
+R20
+Egenregv2_vhd_vec_tst
+Z30 w1650757468
+R8
+R9
+!i122 15
+R0
+Z31 8GenRegV2_Waveforms_Test.vwf.vht
+Z32 FGenRegV2_Waveforms_Test.vwf.vht
+l0
+R24
+VQGzNB:]ZZ_8NTobmcmDJQ2
+!s100 CKe`gJ5TjVo^PJlSL8NG62
+R14
+32
+R28
+!i10b 1
+R29
+Z33 !s90 -work|work|GenRegV2_Waveforms_Test.vwf.vht|
+Z34 !s107 GenRegV2_Waveforms_Test.vwf.vht|
+!i113 1
+R19
+R20
+Agenregv2_arch
+R8
+R9
+Z35 DEx4 work 20 genregv2_vhd_vec_tst 0 22 QGzNB:]ZZ_8NTobmcmDJQ2
+!i122 15
+l51
+Z36 L34 65
+Z37 VESDUReUO:zEfFYIC@G=G^3
+Z38 !s100 che<:S3IhO2:D;TNDPJ<@3
+R14
+32
+R28
+!i10b 1
+R29
+R33
+R34
+!i113 1
+R19
+R20

@@ -1,0 +1,139 @@
+|GenRegV2
+i_clk => one_bit_d_ff:GEN_REG:0:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:1:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:2:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:3:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:4:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:5:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:6:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:7:REGX.i_clk
+i_rst => one_bit_d_ff:GEN_REG:0:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:1:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:2:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:3:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:4:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:5:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:6:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:7:REGX.i_rst
+i_enable_in => one_bit_d_ff:GEN_REG:0:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:1:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:2:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:3:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:4:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:5:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:6:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:7:REGX.i_enable_in
+i_enable_out => one_bit_d_ff:GEN_REG:0:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:1:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:2:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:3:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:4:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:5:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:6:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:7:REGX.i_enable_out
+b_data[0] <> one_bit_d_ff:GEN_REG:0:REGX.b_data
+b_data[1] <> one_bit_d_ff:GEN_REG:1:REGX.b_data
+b_data[2] <> one_bit_d_ff:GEN_REG:2:REGX.b_data
+b_data[3] <> one_bit_d_ff:GEN_REG:3:REGX.b_data
+b_data[4] <> one_bit_d_ff:GEN_REG:4:REGX.b_data
+b_data[5] <> one_bit_d_ff:GEN_REG:5:REGX.b_data
+b_data[6] <> one_bit_d_ff:GEN_REG:6:REGX.b_data
+b_data[7] <> one_bit_d_ff:GEN_REG:7:REGX.b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:0:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:1:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:2:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:3:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:4:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:5:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:6:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|GenRegV2|one_bit_d_ff:\GEN_REG:7:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
