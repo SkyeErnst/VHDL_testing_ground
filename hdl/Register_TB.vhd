@@ -15,12 +15,14 @@ architecture rtl_tb of Register_TB is
             i_rst           : in std_logic; 
             i_enable_in     : in std_logic;
             i_enable_out    : in std_logic;
-            b_data          : inout std_logic_vector (n-1 downto 0)
+            b_data          : inout std_logic_vector (n-1 downto 0);
+            o_direct_out    : out std_logic_vector (n-1 downto 0)
         );
     end component GenRegV2;
 
     signal tb_clk, tb_rst, tb_enable_in, tb_enable_out : std_logic := '0';
-    signal tb_data : std_logic_vector(n-1 downto 0) := (others => 'Z');
+    signal tb_data          : std_logic_vector(n-1 downto 0) := (others => 'Z');
+    signal tb_direct_out    : std_logic_vector (n-1 downto 0):= (others => '0');
 
 begin
     
@@ -30,7 +32,8 @@ begin
         i_rst => tb_rst,
         i_enable_in => tb_enable_in,
         i_enable_out => tb_enable_out,
-        b_data => tb_data
+        b_data => tb_data,
+        o_direct_out => tb_direct_out
     );
 
     tb_clk <= not tb_clk after 2 ns;

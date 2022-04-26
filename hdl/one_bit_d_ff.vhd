@@ -9,9 +9,9 @@ entity one_bit_d_ff is
         i_rst           : in std_logic := '1'; 
         i_enable_in     : in std_logic := '1';
         i_enable_out    : in std_logic := '1';
-        b_data          : inout std_logic := 'Z'
+        b_data          : inout std_logic := 'Z';
 
-        --o_direct_out    : out std_logic := '0'
+        o_direct_out    : out std_logic := '0'
     );
 end one_bit_d_ff;
 
@@ -47,6 +47,6 @@ begin
         end if;
     end process p_on_clock;
 
-    --o_direct_out <= s_latched_data;
+    o_direct_out <= s_latched_data;
 
 end rtl ;

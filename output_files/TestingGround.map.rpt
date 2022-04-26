@@ -1,6 +1,6 @@
 Analysis & Synthesis report for TestingGround
-Mon Apr 25 16:44:48 2022
-Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
+Tue Apr 26 17:02:37 2022
+Quartus Prime Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
 
 
 ---------------------
@@ -14,23 +14,17 @@ Quartus Prime Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Parameter Settings for User Entity Instance: Top-level Entity: |RegAdderTestSynth
- 10. Parameter Settings for User Entity Instance: GenRegV2:RA
- 11. Parameter Settings for User Entity Instance: GenRegV2:RB
- 12. Parameter Settings for User Entity Instance: GenRegV2:RACC
- 13. Parameter Settings for User Entity Instance: nbit_full_adder:ADDER
- 14. Port Connectivity Checks: "nbit_full_adder:ADDER"
- 15. Port Connectivity Checks: "GenRegV2:RACC"
- 16. Post-Synthesis Netlist Statistics for Top Partition
- 17. Elapsed Time Per Partition
- 18. Analysis & Synthesis Messages
+  9. Parameter Settings for User Entity Instance: Top-level Entity: |GenRegV2
+ 10. Post-Synthesis Netlist Statistics for Top Partition
+ 11. Elapsed Time Per Partition
+ 12. Analysis & Synthesis Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2021  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
 and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
@@ -50,14 +44,14 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Mon Apr 25 16:44:48 2022       ;
-; Quartus Prime Version           ; 21.1.0 Build 842 10/21/2021 SJ Lite Edition ;
+; Analysis & Synthesis Status     ; Successful - Tue Apr 26 17:02:37 2022       ;
+; Quartus Prime Version           ; 20.1.0 Build 711 06/05/2020 SJ Lite Edition ;
 ; Revision Name                   ; TestingGround                               ;
-; Top-level Entity Name           ; RegAdderTestSynth                           ;
+; Top-level Entity Name           ; GenRegV2                                    ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 48                                          ;
-; Total pins                      ; 27                                          ;
+; Total registers                 ; 24                                          ;
+; Total pins                      ; 20                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 0                                           ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -76,7 +70,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                                          ; Setting            ; Default Value      ;
 +---------------------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                                          ; 5CEBA4F23C7        ;                    ;
-; Top-level entity name                                                           ; RegAdderTestSynth  ; TestingGround      ;
+; Top-level entity name                                                           ; GenRegV2           ; TestingGround      ;
 ; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
 ; Use smart compilation                                                           ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
@@ -162,29 +156,26 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 16          ;
+; Number detected on machine ; 8           ;
+; Maximum allowed            ; 4           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 16          ;
+; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-16        ;   0.0%      ;
+;     Processors 2-4         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                    ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                             ; Library ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
-; hdl/RegAdderTestSynth.vhd        ; yes             ; User VHDL File  ; K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd ;         ;
-; hdl/nbit_full_adder.vhd          ; yes             ; User VHDL File  ; K:/_programming/Quartus projects/TestingGround/hdl/nbit_full_adder.vhd   ;         ;
-; hdl/Full_Adder_1bit.vhd          ; yes             ; User VHDL File  ; K:/_programming/Quartus projects/TestingGround/hdl/Full_Adder_1bit.vhd   ;         ;
-; hdl/GenRegV2.vhd                 ; yes             ; User VHDL File  ; K:/_programming/Quartus projects/TestingGround/hdl/GenRegV2.vhd          ;         ;
-; hdl/one_bit_d_ff.vhd             ; yes             ; User VHDL File  ; K:/_programming/Quartus projects/TestingGround/hdl/one_bit_d_ff.vhd      ;         ;
-+----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                                   ; Library ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
+; hdl/GenRegV2.vhd                 ; yes             ; User VHDL File  ; C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenRegV2.vhd     ;         ;
+; hdl/one_bit_d_ff.vhd             ; yes             ; User VHDL File  ; C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/one_bit_d_ff.vhd ;         ;
++----------------------------------+-----------------+-----------------+--------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -192,53 +183,43 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimate of Logic utilization (ALMs needed) ; 27          ;
+; Estimate of Logic utilization (ALMs needed) ; 12          ;
 ;                                             ;             ;
-; Combinational ALUT usage for logic          ; 32          ;
+; Combinational ALUT usage for logic          ; 8           ;
 ;     -- 7 input functions                    ; 0           ;
 ;     -- 6 input functions                    ; 0           ;
 ;     -- 5 input functions                    ; 0           ;
-;     -- 4 input functions                    ; 8           ;
-;     -- <=3 input functions                  ; 24          ;
+;     -- 4 input functions                    ; 0           ;
+;     -- <=3 input functions                  ; 8           ;
 ;                                             ;             ;
-; Dedicated logic registers                   ; 48          ;
+; Dedicated logic registers                   ; 24          ;
 ;                                             ;             ;
-; I/O pins                                    ; 27          ;
+; I/O pins                                    ; 20          ;
 ;                                             ;             ;
 ; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_clk~input ;
-; Maximum fan-out                             ; 48          ;
-; Total fan-out                               ; 275         ;
-; Average fan-out                             ; 1.94        ;
+; Maximum fan-out                             ; 24          ;
+; Total fan-out                               ; 140         ;
+; Average fan-out                             ; 1.75        ;
 +---------------------------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                            ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node           ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                         ; Entity Name       ; Library Name ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
-; |RegAdderTestSynth                   ; 32 (0)              ; 48 (0)                    ; 0                 ; 0          ; 27   ; 0            ; |RegAdderTestSynth                                          ; RegAdderTestSynth ; work         ;
-;    |GenRegV2:RA|                     ; 24 (0)              ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA                              ; GenRegV2          ; work         ;
-;       |one_bit_d_ff:\GEN_REG:0:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:0:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:1:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:1:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:2:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:2:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:3:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:3:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:4:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:4:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:5:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:5:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:6:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:6:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:7:REGX| ; 3 (3)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:7:REGX ; one_bit_d_ff      ; work         ;
-;    |GenRegV2:RB|                     ; 8 (0)               ; 24 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB                              ; GenRegV2          ; work         ;
-;       |one_bit_d_ff:\GEN_REG:0:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:0:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:1:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:1:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:2:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:2:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:3:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:3:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:4:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:4:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:5:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:5:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:6:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:6:REGX ; one_bit_d_ff      ; work         ;
-;       |one_bit_d_ff:\GEN_REG:7:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:7:REGX ; one_bit_d_ff      ; work         ;
-+--------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-------------------------------------------------------------+-------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                               ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                    ; Entity Name  ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
+; |GenRegV2                         ; 8 (0)               ; 24 (0)                    ; 0                 ; 0          ; 20   ; 0            ; |GenRegV2                              ; GenRegV2     ; work         ;
+;    |one_bit_d_ff:\GEN_REG:0:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:0:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:1:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:1:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:2:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:2:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:3:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:3:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:4:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:4:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:5:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:5:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:6:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:6:REGX ; one_bit_d_ff ; work         ;
+;    |one_bit_d_ff:\GEN_REG:7:REGX| ; 1 (1)               ; 3 (3)                     ; 0                 ; 0          ; 0    ; 0            ; |GenRegV2|one_bit_d_ff:\GEN_REG:7:REGX ; one_bit_d_ff ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+----------------------------------------+--------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -247,83 +228,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 48    ;
+; Total registers                              ; 24    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 8     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 48    ;
+; Number of registers using Clock Enable       ; 24    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: Top-level Entity: |RegAdderTestSynth ;
-+----------------+-------+----------------------------------------------------------+
-; Parameter Name ; Value ; Type                                                     ;
-+----------------+-------+----------------------------------------------------------+
-; n              ; 8     ; Signed Integer                                           ;
-+----------------+-------+----------------------------------------------------------+
++--------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |GenRegV2 ;
++----------------+-------+-------------------------------------------------+
+; Parameter Name ; Value ; Type                                            ;
++----------------+-------+-------------------------------------------------+
+; n              ; 8     ; Signed Integer                                  ;
++----------------+-------+-------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GenRegV2:RA ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; n              ; 8     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+----------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GenRegV2:RB ;
-+----------------+-------+---------------------------------+
-; Parameter Name ; Value ; Type                            ;
-+----------------+-------+---------------------------------+
-; n              ; 8     ; Signed Integer                  ;
-+----------------+-------+---------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: GenRegV2:RACC ;
-+----------------+-------+-----------------------------------+
-; Parameter Name ; Value ; Type                              ;
-+----------------+-------+-----------------------------------+
-; n              ; 8     ; Signed Integer                    ;
-+----------------+-------+-----------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+--------------------------------------------------------------------+
-; Parameter Settings for User Entity Instance: nbit_full_adder:ADDER ;
-+----------------+-------+-------------------------------------------+
-; Parameter Name ; Value ; Type                                      ;
-+----------------+-------+-------------------------------------------+
-; n              ; 8     ; Signed Integer                            ;
-+----------------+-------+-------------------------------------------+
-Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
-
-
-+---------------------------------------------------+
-; Port Connectivity Checks: "nbit_full_adder:ADDER" ;
-+------+-------+----------+-------------------------+
-; Port ; Type  ; Severity ; Details                 ;
-+------+-------+----------+-------------------------+
-; i_a  ; Input ; Info     ; Stuck at GND            ;
-; i_b  ; Input ; Info     ; Stuck at GND            ;
-+------+-------+----------+-------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "GenRegV2:RACC"                                                                       ;
-+--------+-------+----------+-------------------------------------------------------------------------------------+
-; Port   ; Type  ; Severity ; Details                                                                             ;
-+--------+-------+----------+-------------------------------------------------------------------------------------+
-; b_data ; Bidir ; Warning  ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+--------+-------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -331,20 +253,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 48                          ;
-;     ENA               ; 32                          ;
-;     ENA CLR           ; 16                          ;
+; arriav_ff             ; 24                          ;
+;     ENA               ; 16                          ;
+;     ENA CLR           ; 8                           ;
 ; arriav_io_obuf        ; 8                           ;
-; arriav_lcell_comb     ; 33                          ;
-;     normal            ; 33                          ;
-;         0 data inputs ; 1                           ;
-;         1 data inputs ; 16                          ;
-;         2 data inputs ; 8                           ;
-;         4 data inputs ; 8                           ;
-; boundary_port         ; 27                          ;
+; arriav_lcell_comb     ; 8                           ;
+;     normal            ; 8                           ;
+;         1 data inputs ; 8                           ;
+; boundary_port         ; 20                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 1.00                        ;
-; Average LUT depth     ; 0.64                        ;
+; Average LUT depth     ; 0.17                        ;
 +-----------------------+-----------------------------+
 
 
@@ -362,65 +281,40 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 21.1.0 Build 842 10/21/2021 SJ Lite Edition
-    Info: Processing started: Mon Apr 25 16:44:38 2022
+    Info: Version 20.1.0 Build 711 06/05/2020 SJ Lite Edition
+    Info: Processing started: Tue Apr 26 17:02:22 2022
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off TestingGround -c TestingGround
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 16 of the 16 processors detected
-Info (12021): Found 2 design units, including 1 entities, in source file hdl/regaddertestsynth.vhd
-    Info (12022): Found design unit 1: RegAdderTestSynth-rtl File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 35
-    Info (12023): Found entity 1: RegAdderTestSynth File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 5
+Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/nbit_full_adder.vhd
-    Info (12022): Found design unit 1: nbit_full_adder-rtl File: K:/_programming/Quartus projects/TestingGround/hdl/nbit_full_adder.vhd Line: 20
-    Info (12023): Found entity 1: nbit_full_adder File: K:/_programming/Quartus projects/TestingGround/hdl/nbit_full_adder.vhd Line: 5
+    Info (12022): Found design unit 1: nbit_full_adder-rtl File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/nbit_full_adder.vhd Line: 20
+    Info (12023): Found entity 1: nbit_full_adder File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/nbit_full_adder.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/full_adder_1bit.vhd
-    Info (12022): Found design unit 1: Full_Adder_1bit-Behavioral File: K:/_programming/Quartus projects/TestingGround/hdl/Full_Adder_1bit.vhd Line: 26
-    Info (12023): Found entity 1: Full_Adder_1bit File: K:/_programming/Quartus projects/TestingGround/hdl/Full_Adder_1bit.vhd Line: 14
+    Info (12022): Found design unit 1: Full_Adder_1bit-Behavioral File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/Full_Adder_1bit.vhd Line: 26
+    Info (12023): Found entity 1: Full_Adder_1bit File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/Full_Adder_1bit.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/genregv2.vhd
-    Info (12022): Found design unit 1: GenRegV2-rtl File: K:/_programming/Quartus projects/TestingGround/hdl/GenRegV2.vhd Line: 21
-    Info (12023): Found entity 1: GenRegV2 File: K:/_programming/Quartus projects/TestingGround/hdl/GenRegV2.vhd Line: 5
+    Info (12022): Found design unit 1: GenRegV2-rtl File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenRegV2.vhd Line: 21
+    Info (12023): Found entity 1: GenRegV2 File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenRegV2.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/one_bit_d_ff.vhd
-    Info (12022): Found design unit 1: one_bit_d_ff-rtl File: K:/_programming/Quartus projects/TestingGround/hdl/one_bit_d_ff.vhd Line: 18
-    Info (12023): Found entity 1: one_bit_d_ff File: K:/_programming/Quartus projects/TestingGround/hdl/one_bit_d_ff.vhd Line: 5
+    Info (12022): Found design unit 1: one_bit_d_ff-rtl File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/one_bit_d_ff.vhd Line: 18
+    Info (12023): Found entity 1: one_bit_d_ff File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/one_bit_d_ff.vhd Line: 5
 Info (12021): Found 2 design units, including 1 entities, in source file hdl/genericregister.vhd
-    Info (12022): Found design unit 1: GenericRegister-rtl File: K:/_programming/Quartus projects/TestingGround/hdl/GenericRegister.vhd Line: 23
-    Info (12023): Found entity 1: GenericRegister File: K:/_programming/Quartus projects/TestingGround/hdl/GenericRegister.vhd Line: 5
-Info (12127): Elaborating entity "RegAdderTestSynth" for the top level hierarchy
-Warning (10540): VHDL Signal Declaration warning at RegAdderTestSynth.vhd(29): used explicit default value for signal "o_sum" because signal was never assigned a value File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-Warning (10540): VHDL Signal Declaration warning at RegAdderTestSynth.vhd(63): used explicit default value for signal "s_a" because signal was never assigned a value File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 63
-Warning (10540): VHDL Signal Declaration warning at RegAdderTestSynth.vhd(64): used explicit default value for signal "s_b" because signal was never assigned a value File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 64
-Info (12128): Elaborating entity "GenRegV2" for hierarchy "GenRegV2:RA" File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 88
-Info (12128): Elaborating entity "one_bit_d_ff" for hierarchy "GenRegV2:RA|one_bit_d_ff:\GEN_REG:0:REGX" File: K:/_programming/Quartus projects/TestingGround/hdl/GenRegV2.vhd Line: 33
-Info (12128): Elaborating entity "nbit_full_adder" for hierarchy "nbit_full_adder:ADDER" File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 130
-Info (12128): Elaborating entity "Full_Adder_1bit" for hierarchy "nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:0:ADDX" File: K:/_programming/Quartus projects/TestingGround/hdl/nbit_full_adder.vhd Line: 39
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "o_sum[0]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[1]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[2]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[3]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[4]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[5]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[6]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_sum[7]" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 29
-    Warning (13410): Pin "o_cout" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 30
-    Warning (13410): Pin "o_ov" is stuck at GND File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 31
+    Info (12022): Found design unit 1: GenericRegister-rtl File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenericRegister.vhd Line: 23
+    Info (12023): Found entity 1: GenericRegister File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenericRegister.vhd Line: 5
+Info (12127): Elaborating entity "GenRegV2" for the top level hierarchy
+Info (12128): Elaborating entity "one_bit_d_ff" for hierarchy "one_bit_d_ff:\GEN_REG:0:REGX" File: C:/Users/A Fox/Documents/_ELECTRONICS/VHDL_testing_ground/hdl/GenRegV2.vhd Line: 33
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_enable_in_acc" File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 20
-    Warning (15610): No output dependent on input pin "i_enable_out_acc" File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 21
-    Warning (15610): No output dependent on input pin "i_cin" File: K:/_programming/Quartus projects/TestingGround/hdl/RegAdderTestSynth.vhd Line: 24
-Info (21057): Implemented 91 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 9 input pins
-    Info (21059): Implemented 10 output pins
+Info (21057): Implemented 44 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 8 output pins
     Info (21060): Implemented 8 bidirectional pins
-    Info (21061): Implemented 64 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4914 megabytes
-    Info: Processing ended: Mon Apr 25 16:44:48 2022
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:27
+    Info (21061): Implemented 24 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
+    Info: Peak virtual memory: 4843 megabytes
+    Info: Processing ended: Tue Apr 26 17:02:37 2022
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:39
 
 

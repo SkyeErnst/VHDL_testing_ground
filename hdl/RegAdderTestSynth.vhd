@@ -26,6 +26,8 @@ entity RegAdderTestSynth is
         --Data bus
         b_data                  : inout std_logic_vector (n-1 downto 0) := (others => 'Z');
 
+        o_direct_out            : out std_logic_vecotr (n-1 downto 0) := (others => '0');
+
         o_sum                   : out std_logic_vector (n-1 downto 0) := (others => '0');
         o_cout                  : out std_logic := '0';
         o_ov                    : out std_logic := '0'
@@ -42,7 +44,8 @@ architecture rtl of RegAdderTestSynth is
             i_rst           : in std_logic; 
             i_enable_in     : in std_logic;
             i_enable_out    : in std_logic;
-            b_data          : inout std_logic_vector (n-1 downto 0)
+            b_data          : inout std_logic_vector (n-1 downto 0);
+            o_direct_out    : out std_logic_vecotr (n-1 downto 0);
         );
     end component GenRegV2;
 
@@ -60,9 +63,9 @@ architecture rtl of RegAdderTestSynth is
     end component nbit_full_adder;
 
     --Adder signals
-    signal s_a                 : std_logic_vector (n-1 downto 0) := (others => '0');
-    signal s_b                 : std_logic_vector (n-1 downto 0) := (others => '0');
-    signal s_sum               : std_logic_vector (n-1 downto 0) := (others => '0');
+    signal s_a_direct                 : std_logic_vector (n-1 downto 0) := (others => '0');
+    signal s_b_direct                 : std_logic_vector (n-1 downto 0) := (others => '0');
+    signal s_sum                      : std_logic_vector (n-1 downto 0) := (others => '0');
     --signal tb_cin               : std_logic := '0';
     --signal tb_cout              : std_logic := '0';
     --signal tb_ov                : std_logic := '0';
@@ -96,7 +99,8 @@ begin
         i_rst => i_rst,
         i_enable_in => i_enable_in_a,
         i_enable_out => i_enable_out_a,
-        b_data => b_data
+        b_data => b_data,
+        o_direct_out => s_a_direct
     );
 
     RB:GenRegV2 
@@ -110,7 +114,8 @@ begin
         i_rst => i_rst,
         i_enable_in => i_enable_in_b,
         i_enable_out => i_enable_out_b,
-        b_data => b_data
+        b_data => b_data,
+        o_direct_out => s_b_direct
     );
 
     RACC:GenRegV2 
