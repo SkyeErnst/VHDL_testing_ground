@@ -4,39 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "o_sum[0]",
+					"name" : "b_data[0]",
 					"strict" : false
 				},
 				{
-					"name" : "o_sum[1]",
+					"name" : "b_data[1]",
 					"strict" : false
 				},
 				{
-					"name" : "o_cout",
+					"name" : "b_data[2]",
 					"strict" : false
 				},
 				{
-					"name" : "o_OV",
+					"name" : "b_data[3]",
 					"strict" : false
 				},
 				{
-					"name" : "i_a[0]",
+					"name" : "b_data[4]",
 					"strict" : false
 				},
 				{
-					"name" : "i_b[0]",
+					"name" : "b_data[5]",
 					"strict" : false
 				},
 				{
-					"name" : "i_cin",
+					"name" : "b_data[6]",
 					"strict" : false
 				},
 				{
-					"name" : "i_a[1]",
+					"name" : "b_data[7]",
 					"strict" : false
 				},
 				{
-					"name" : "i_b[1]",
+					"name" : "i_clk",
+					"strict" : false
+				},
+				{
+					"name" : "i_rst",
+					"strict" : false
+				},
+				{
+					"name" : "i_enable_out_b",
+					"strict" : false
+				},
+				{
+					"name" : "i_enable_out_a",
+					"strict" : false
+				},
+				{
+					"name" : "i_enable_in_b",
+					"strict" : false
+				},
+				{
+					"name" : "i_enable_in_a",
 					"strict" : false
 				}
 			]

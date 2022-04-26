@@ -1,16 +1,493 @@
-|nbit_full_adder
+|RegAdderTestSynth
+i_clk => GenRegV2:RA.i_clk
+i_clk => GenRegV2:RB.i_clk
+i_clk => GenRegV2:RACC.i_clk
+i_rst => GenRegV2:RA.i_rst
+i_rst => GenRegV2:RB.i_rst
+i_rst => GenRegV2:RACC.i_rst
+i_enable_in_a => GenRegV2:RA.i_enable_in
+i_enable_out_a => GenRegV2:RA.i_enable_out
+i_enable_in_b => GenRegV2:RB.i_enable_in
+i_enable_out_b => GenRegV2:RB.i_enable_out
+i_enable_in_acc => GenRegV2:RACC.i_enable_in
+i_enable_out_acc => GenRegV2:RACC.i_enable_out
+i_cin => nbit_full_adder:ADDER.i_cin
+b_data[0] <> GenRegV2:RA.b_data[0]
+b_data[0] <> GenRegV2:RB.b_data[0]
+b_data[1] <> GenRegV2:RA.b_data[1]
+b_data[1] <> GenRegV2:RB.b_data[1]
+b_data[2] <> GenRegV2:RA.b_data[2]
+b_data[2] <> GenRegV2:RB.b_data[2]
+b_data[3] <> GenRegV2:RA.b_data[3]
+b_data[3] <> GenRegV2:RB.b_data[3]
+b_data[4] <> GenRegV2:RA.b_data[4]
+b_data[4] <> GenRegV2:RB.b_data[4]
+b_data[5] <> GenRegV2:RA.b_data[5]
+b_data[5] <> GenRegV2:RB.b_data[5]
+b_data[6] <> GenRegV2:RA.b_data[6]
+b_data[6] <> GenRegV2:RB.b_data[6]
+b_data[7] <> GenRegV2:RA.b_data[7]
+b_data[7] <> GenRegV2:RB.b_data[7]
+o_sum[0] <= <GND>
+o_sum[1] <= <GND>
+o_sum[2] <= <GND>
+o_sum[3] <= <GND>
+o_sum[4] <= <GND>
+o_sum[5] <= <GND>
+o_sum[6] <= <GND>
+o_sum[7] <= <GND>
+o_cout <= nbit_full_adder:ADDER.o_cout
+o_ov <= nbit_full_adder:ADDER.o_OV
+
+
+|RegAdderTestSynth|GenRegV2:RA
+i_clk => one_bit_d_ff:GEN_REG:0:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:1:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:2:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:3:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:4:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:5:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:6:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:7:REGX.i_clk
+i_rst => one_bit_d_ff:GEN_REG:0:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:1:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:2:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:3:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:4:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:5:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:6:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:7:REGX.i_rst
+i_enable_in => one_bit_d_ff:GEN_REG:0:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:1:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:2:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:3:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:4:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:5:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:6:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:7:REGX.i_enable_in
+i_enable_out => one_bit_d_ff:GEN_REG:0:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:1:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:2:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:3:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:4:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:5:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:6:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:7:REGX.i_enable_out
+b_data[0] <> one_bit_d_ff:GEN_REG:0:REGX.b_data
+b_data[1] <> one_bit_d_ff:GEN_REG:1:REGX.b_data
+b_data[2] <> one_bit_d_ff:GEN_REG:2:REGX.b_data
+b_data[3] <> one_bit_d_ff:GEN_REG:3:REGX.b_data
+b_data[4] <> one_bit_d_ff:GEN_REG:4:REGX.b_data
+b_data[5] <> one_bit_d_ff:GEN_REG:5:REGX.b_data
+b_data[6] <> one_bit_d_ff:GEN_REG:6:REGX.b_data
+b_data[7] <> one_bit_d_ff:GEN_REG:7:REGX.b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:0:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:1:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:2:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:3:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:4:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:5:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:6:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RA|one_bit_d_ff:\GEN_REG:7:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB
+i_clk => one_bit_d_ff:GEN_REG:0:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:1:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:2:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:3:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:4:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:5:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:6:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:7:REGX.i_clk
+i_rst => one_bit_d_ff:GEN_REG:0:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:1:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:2:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:3:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:4:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:5:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:6:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:7:REGX.i_rst
+i_enable_in => one_bit_d_ff:GEN_REG:0:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:1:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:2:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:3:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:4:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:5:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:6:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:7:REGX.i_enable_in
+i_enable_out => one_bit_d_ff:GEN_REG:0:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:1:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:2:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:3:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:4:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:5:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:6:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:7:REGX.i_enable_out
+b_data[0] <> one_bit_d_ff:GEN_REG:0:REGX.b_data
+b_data[1] <> one_bit_d_ff:GEN_REG:1:REGX.b_data
+b_data[2] <> one_bit_d_ff:GEN_REG:2:REGX.b_data
+b_data[3] <> one_bit_d_ff:GEN_REG:3:REGX.b_data
+b_data[4] <> one_bit_d_ff:GEN_REG:4:REGX.b_data
+b_data[5] <> one_bit_d_ff:GEN_REG:5:REGX.b_data
+b_data[6] <> one_bit_d_ff:GEN_REG:6:REGX.b_data
+b_data[7] <> one_bit_d_ff:GEN_REG:7:REGX.b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:0:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:1:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:2:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:3:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:4:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:5:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:6:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RB|one_bit_d_ff:\GEN_REG:7:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC
+i_clk => one_bit_d_ff:GEN_REG:0:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:1:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:2:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:3:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:4:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:5:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:6:REGX.i_clk
+i_clk => one_bit_d_ff:GEN_REG:7:REGX.i_clk
+i_rst => one_bit_d_ff:GEN_REG:0:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:1:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:2:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:3:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:4:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:5:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:6:REGX.i_rst
+i_rst => one_bit_d_ff:GEN_REG:7:REGX.i_rst
+i_enable_in => one_bit_d_ff:GEN_REG:0:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:1:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:2:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:3:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:4:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:5:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:6:REGX.i_enable_in
+i_enable_in => one_bit_d_ff:GEN_REG:7:REGX.i_enable_in
+i_enable_out => one_bit_d_ff:GEN_REG:0:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:1:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:2:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:3:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:4:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:5:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:6:REGX.i_enable_out
+i_enable_out => one_bit_d_ff:GEN_REG:7:REGX.i_enable_out
+b_data[0] <> one_bit_d_ff:GEN_REG:0:REGX.b_data
+b_data[1] <> one_bit_d_ff:GEN_REG:1:REGX.b_data
+b_data[2] <> one_bit_d_ff:GEN_REG:2:REGX.b_data
+b_data[3] <> one_bit_d_ff:GEN_REG:3:REGX.b_data
+b_data[4] <> one_bit_d_ff:GEN_REG:4:REGX.b_data
+b_data[5] <> one_bit_d_ff:GEN_REG:5:REGX.b_data
+b_data[6] <> one_bit_d_ff:GEN_REG:6:REGX.b_data
+b_data[7] <> one_bit_d_ff:GEN_REG:7:REGX.b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:0:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:1:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:2:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:3:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:4:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:5:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:6:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|GenRegV2:RACC|one_bit_d_ff:\GEN_REG:7:REGX
+i_clk => s_latched_data.CLK
+i_clk => b_data~reg0.CLK
+i_clk => b_data~en.CLK
+i_rst => s_latched_data.ACLR
+i_rst => b_data~reg0.ENA
+i_rst => b_data~en.ENA
+i_enable_in => s_latched_data.ENA
+i_enable_out => b_data~en.DATAIN
+b_data <> b_data
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER
 i_a[0] => Full_Adder_1bit:GEN_ADDER:0:ADDX.a
 i_a[1] => Full_Adder_1bit:GEN_ADDER:1:ADDX.a
+i_a[2] => Full_Adder_1bit:GEN_ADDER:2:ADDX.a
+i_a[3] => Full_Adder_1bit:GEN_ADDER:3:ADDX.a
+i_a[4] => Full_Adder_1bit:GEN_ADDER:4:ADDX.a
+i_a[5] => Full_Adder_1bit:GEN_ADDER:5:ADDX.a
+i_a[6] => Full_Adder_1bit:GEN_ADDER:6:ADDX.a
+i_a[7] => Full_Adder_1bit:GEN_ADDER:7:ADDX.a
 i_b[0] => Full_Adder_1bit:GEN_ADDER:0:ADDX.b
 i_b[1] => Full_Adder_1bit:GEN_ADDER:1:ADDX.b
+i_b[2] => Full_Adder_1bit:GEN_ADDER:2:ADDX.b
+i_b[3] => Full_Adder_1bit:GEN_ADDER:3:ADDX.b
+i_b[4] => Full_Adder_1bit:GEN_ADDER:4:ADDX.b
+i_b[5] => Full_Adder_1bit:GEN_ADDER:5:ADDX.b
+i_b[6] => Full_Adder_1bit:GEN_ADDER:6:ADDX.b
+i_b[7] => Full_Adder_1bit:GEN_ADDER:7:ADDX.b
 i_cin => Full_Adder_1bit:GEN_ADDER:0:ADDX.cin
 o_sum[0] <= Full_Adder_1bit:GEN_ADDER:0:ADDX.sum
 o_sum[1] <= Full_Adder_1bit:GEN_ADDER:1:ADDX.sum
-o_cout <= Full_Adder_1bit:GEN_ADDER:1:ADDX.cout
+o_sum[2] <= Full_Adder_1bit:GEN_ADDER:2:ADDX.sum
+o_sum[3] <= Full_Adder_1bit:GEN_ADDER:3:ADDX.sum
+o_sum[4] <= Full_Adder_1bit:GEN_ADDER:4:ADDX.sum
+o_sum[5] <= Full_Adder_1bit:GEN_ADDER:5:ADDX.sum
+o_sum[6] <= Full_Adder_1bit:GEN_ADDER:6:ADDX.sum
+o_sum[7] <= Full_Adder_1bit:GEN_ADDER:7:ADDX.sum
+o_cout <= Full_Adder_1bit:GEN_ADDER:7:ADDX.cout
 o_OV <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nbit_full_adder|Full_Adder_1bit:\GEN_ADDER:0:ADDX
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:0:ADDX
 a => sum.IN0
 a => cout.IN0
 a => cout.IN0
@@ -26,7 +503,103 @@ cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|nbit_full_adder|Full_Adder_1bit:\GEN_ADDER:1:ADDX
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:1:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:2:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:3:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:4:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:5:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:6:ADDX
+a => sum.IN0
+a => cout.IN0
+a => cout.IN0
+b => sum.IN1
+b => cout.IN1
+b => cout.IN0
+cin => sum.IN1
+cin => cout.IN1
+cin => cout.IN1
+cin => ov.IN1
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+ov <= ov.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|RegAdderTestSynth|nbit_full_adder:ADDER|Full_Adder_1bit:\GEN_ADDER:7:ADDX
 a => sum.IN0
 a => cout.IN0
 a => cout.IN0
